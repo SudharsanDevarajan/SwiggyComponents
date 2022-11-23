@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CarouselView: View {
     @Namespace var namespace
-    var banners = ["b1","b3","b2"]
+    var banners = ["s1","s2","s3","s4","s5"]
     @State var index = 0
     
     var body: some View {
         VStack{
             TabView(selection: $index) {
-                ForEach(0...2,id: \.self) { index in
+                ForEach(0...4,id: \.self) { index in
                     Image(banners[index])
                         .resizable()
                         .scaledToFill()
